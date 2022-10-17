@@ -94,17 +94,16 @@ $xml = new SimpleXMLElement($xml_signo);
                 $dataInicio = $sig->dataInicio;
                 $dataFim    = $sig->dataFim;
 				
-				$diaSignoInicio = $dataInicio->format('d');
-				$mesSignoInicio = $dataInicio->format('m');
+		$diaSignoInicio = $dataInicio->format('d');
+		$mesSignoInicio = $dataInicio->format('m');
 				
-				$diaSignoFim = $dataInicio->format('d');
-				$mesSignoFim = $dataInicio->format('m');								
+		$diaSignoFim = $dataInicio->format('d');
+		$mesSignoFim = $dataInicio->format('m');								
 
-                if (($dia >= $diaSignoInicio && $mes >= $mesSignoInicio) &&
-					($dia <= $diaSignoFim && $mes <= $mesSignoFim))
-				{
-                    <span>Signo: <?php echo $sig->signoNome . '</br>'; ?>
-                    <span>Sobre: <?php echo $sig->descricao . '</br>'; ?>
+                if (($dia >= $diaSignoInicio && $mes >= $mesSignoInicio) && ($dia <= $diaSignoFim && $mes <= $mesSignoFim))
+		{
+                    ?><span>Signo: <?php echo $sig->signoNome . '</br>'; ?>
+                      <span>Sobre: <?php echo $sig->descricao . '</br>'; ?>
                 }            
             endforeach;
             echo '</br>'
